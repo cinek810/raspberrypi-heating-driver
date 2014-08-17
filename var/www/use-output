@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ "x$1" == "x" ]
+then
+	echo "You have to supply arguments"
+fi
+
+if [ "x$2" == "x" ]
+then
+	echo "You have to supply GPIO pin number"
+fi
+
+
+function turnon  {
+	if [ ! -f /sys/class/gpio/gpio$1/direction ]
+	then
+		echo "$1" > /sys/class/gpio/export
+	fi
+
+	echo "out" > /sys/class/gpio/gpio$1/direction 
+	echo "0"  > /sys/class/gpio/gpio$1/value
+}
+
+function turnoff {
+	echo "out" > /sys/class/gpio/gpio$1/direction
+	echo "1"  > /sys/class/gpio/gpio$1/value
+}
+
+
+
+case $1 in
+	"on") turnon $2  ;;
+	"off") turnoff $2 ;;
+	*) echo "No such command"
+esac

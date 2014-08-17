@@ -1,0 +1,1 @@
+*/5 * * * * root /var/www/cronjob/update-sensors.php 2>&1 > /var/www/decision.log && cat /var/www/decision.log >> /var/log/update-sensors-all.log

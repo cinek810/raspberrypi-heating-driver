@@ -1,0 +1,36 @@
+
+========= Performing actions on .
+
+========= Performing actions on ..
+
+========= Performing actions on 10-000801487b04
+CRCOK:'N' and crcokbool=0
+Updating temp information sensor with UPDATE sensors SET temp = -0.75, FAIL = 0 WHERE SENSORID ='10-000801487b04'
+Getting data with query:SELECT temp as t,on12 as 'on',off12 as off,pin,nazwa from sensors where SENSORID='10-000801487b04'
+Temp: -0.75 on:19 off:20
+Doesn't consider output - CRC error
+Doesn't update rrd with data - CRC error
+
+========= Performing actions on 10-000801489001
+CRCOK:'Y' and crcokbool=1
+Updating temp information sensor with UPDATE sensors SET temp = 24, FAIL = 1 WHERE SENSORID ='10-000801489001'
+Getting data with query:SELECT temp as t,on12 as 'on',off12 as off,pin,nazwa from sensors where SENSORID='10-000801489001'
+Temp: 24 on:19 off:20
+Pin not defined for  If you use pin 500 you have to change this special value.
+Updating rrd with timestamp=1408269950 temp=24
+
+========= Performing actions on 10-000801489146
+CRCOK:'Y' and crcokbool=1
+Updating temp information sensor with UPDATE sensors SET temp = 23.562, FAIL = 1 WHERE SENSORID ='10-000801489146'
+Getting data with query:SELECT temp as t,on12 as 'on',off12 as off,pin,nazwa from sensors where SENSORID='10-000801489146'
+Temp: 23.562 on:19 off:20
+Pin not defined for NOT NAMED If you use pin 500 you have to change this special value.
+Updating rrd with timestamp=1408269961 temp=23.562
+
+========= Performing actions on 10-0008015579b9
+CRCOK:'N' and crcokbool=0
+Updating temp information sensor with UPDATE sensors SET temp = -0.75, FAIL = 0 WHERE SENSORID ='10-0008015579b9'
+Getting data with query:SELECT temp as t,on12 as 'on',off12 as off,pin,nazwa from sensors where SENSORID='10-0008015579b9'
+Temp: -0.75 on:19 off:20
+Doesn't consider output - CRC error
+Doesn't update rrd with data - CRC error
